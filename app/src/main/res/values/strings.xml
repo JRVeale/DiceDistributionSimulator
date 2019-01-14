@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Dice Experimental Distributions</string>
+    <string name="heading">Dice Distribution Generator</string>
+    <string name="description">Generate a graph approximating the distribution of any combination of dice rolls you can think of!
+        \n\nYou can use parentheses, standard operators (-+/*^), and ndm to represent the result of rolling n m-sided dice).
+        \nn and m can be the result of mathematical operations, or even other dice rolls! Get creative!
+    </string>
+    <string name="user_dice_input_prompt">3d6 + 4*(1d4d5)</string>
+    <string name="user_rolls_input_prompt">Trials</string>
+    <string name="user_input_button_text">Roll!</string>
+</resources>
