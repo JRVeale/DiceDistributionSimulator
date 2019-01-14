@@ -7,3 +7,7 @@ TODO Add favourite dice combos
 TODO Option to stack and clear series
 
 TODO Option to choose colour of line generated
+
+TODO Loading animation for long trials
+
+TODO Result showing if a single trial
