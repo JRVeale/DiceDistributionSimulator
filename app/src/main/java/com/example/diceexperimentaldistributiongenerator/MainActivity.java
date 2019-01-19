@@ -38,9 +38,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Below defines action for button press
-        final Button button = findViewById(R.id.roll_button);
-        button.setOnClickListener(new View.OnClickListener(){
+        //Define action for roll button press
+        final Button roll_button = findViewById(R.id.roll_button);
+        roll_button.setOnClickListener(new View.OnClickListener(){
             /** Called when the user taps the Roll! button*/
             public void onClick(View v) {
                 try {
@@ -53,11 +53,25 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        //Defines action for clear button press
+        final Button clear_button = findViewById(R.id.clear_button);
+        clear_button.setOnClickListener(new View.OnClickListener(){
+            /** Called when the user taps the Roll! button*/
+            public void onClick(View v) {
+                try {
+                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.RESULT_UNCHANGED_SHOWN);
+                }
+                catch(Exception e){}
+                graph.removeAllSeries();
+            }
+        });
     }
 
     private void fillMap() {
         graph = (GraphView) findViewById(R.id.graph);
-        graph.removeAllSeries();
+        //graph.removeAllSeries();
 
         LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[]{});
         graph.addSeries(series);
